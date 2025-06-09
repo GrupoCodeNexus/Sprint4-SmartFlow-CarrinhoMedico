@@ -1,0 +1,45 @@
+{
+  "gavetas": [
+    {
+      "id": 1,
+      "nome": "Gaveta 1 (Medicamentos)",
+      "itens": [
+        { "id": "MED001", "nome": "Dipirona 500mg", "quantidade": 50 },
+        { "id": "MED002", "nome": "Paracetamol 750mg", "quantidade": 40 },
+        { "id": "MED003", "nome": "Amoxicilina 500mg", "quantidade": 30 }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Gaveta 2 (Insumos Médicos)",
+      "itens": [
+        { "id": "INS001", "nome": "Luvas Descartáveis (Caixa)", "quantidade": 10 },
+        { "id": "INS002", "nome": "Máscaras Cirúrgicas (Caixa)", "quantidade": 15 }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Gaveta 3 (Insumos Médicos)",
+      "itens": [
+        { "id": "INS003", "nome": "Seringas 5ml (Caixa)", "quantidade": 20 },
+        { "id": "INS004", "nome": "Agulhas 25x7 (Caixa)", "quantidade": 20 }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Gaveta 4 (Insumos Médicos)",
+      "itens": [
+        { "id": "INS005", "nome": "Algodão Hidrófilo (Rolo)", "quantidade": 5 },
+        { "id": "INS006", "nome": "Gaze Estéril 10x10cm (Pacote)", "quantidade": 25 }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Gaveta 5 (Insumos Médicos)",
+      "itens": [
+        { "id": "INS007", "nome": "Álcool 70% (Frasco 1L)", "quantidade": 3 },
+        { "id": "INS008", "nome": "Esparadrapo (Rolo)", "quantidade": 8 }
+      ]
+    }
+  ]
+}
