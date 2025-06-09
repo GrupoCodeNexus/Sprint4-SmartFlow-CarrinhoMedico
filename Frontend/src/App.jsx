@@ -4,7 +4,8 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import CarrinhoPage from './Routes/Carrinho'; 
 import EstoquePage from './Routes/Estoque';   
-import LoginPage from './Routes/Login';     
+import LoginPage from './Routes/Login';
+import CadastroPage from './Routes/Cadastro';     
 import ErrorPage from './Routes/Error';     
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/carrinhos" element={<CarrinhoPage />} />
             <Route path="/estoque" element={<EstoquePage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/cadastro" element={<CadastroPage />} />
             <Route path="*" element={<ErrorPage />} /> 
           </Routes>
         </main>
