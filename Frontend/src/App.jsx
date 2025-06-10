@@ -2,10 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import CarrinhoPage from './Routes/Carrinho';
-import EstoquePage from './Routes/Estoque';
+import CarrinhoPage from './Routes/Carrinho'; 
+import EstoquePage from './Routes/Estoque';   
 import LoginPage from './Routes/Login';
-import ErrorPage from './Routes/Error';
+import CadastroPage from './Routes/Cadastro';     
+import ErrorPage from './Routes/Error';     
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
             <Route path="/carrinhos" element={<CarrinhoPage />} />
             <Route path="/estoque" element={<EstoquePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="/cadastro" element={<CadastroPage />} />
+            <Route path="*" element={<ErrorPage />} /> 
           </Routes>
         </main>
 
