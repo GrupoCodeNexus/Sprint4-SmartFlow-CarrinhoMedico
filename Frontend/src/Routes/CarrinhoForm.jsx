@@ -4,6 +4,7 @@ import axios from 'axios';
 const CarrinhoForm = ({ onCarrinhoCreated }) => {
   const [nome, setNome] = useState('');
   const [localizacao, setLocalizacao] = useState('');
+  const [status, setStatus] = useState('aberto');
   const [message, setMessage] = useState('');
   const [isError, setIsError] = useState(false);
 
@@ -13,10 +14,11 @@ const CarrinhoForm = ({ onCarrinhoCreated }) => {
     setIsError(false);
 
     try {
-      await axios.post("http://localhost:3001/carrinhos", { nome, localizacao });
+      await axios.post("http://localhost:3001/carrinhos", { nome, localizacao, status });
       setMessage('Carrinho criado com sucesso!');
       setNome('');
       setLocalizacao('');
+      setStatus('aberto');
       if (onCarrinhoCreated) {
         onCarrinhoCreated();
       }
@@ -52,6 +54,20 @@ const CarrinhoForm = ({ onCarrinhoCreated }) => {
             className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
             required
           />
+        </div>
+        <div>
+          <label htmlFor="status" className="block text-sm font-medium text-gray-700">Status:</label>
+          <select
+            id="status"
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+          >
+            <option value="aberto">Aberto</option>
+            <option value="fechado">Fechado</option>
+            <option value="estoque">Estoque</option>
+          </select>
         </div>
         <button
           type="submit"

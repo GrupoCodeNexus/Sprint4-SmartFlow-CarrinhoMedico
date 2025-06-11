@@ -8,6 +8,7 @@ const Header = () => {
         <Link to="/" className="text-2xl font-bold">Gerenciador de Carrinhos</Link>
         <nav>
           <ul className="flex space-x-4">
+            <li><Link to="/local" className="hover:text-blue-200">Localização</Link></li>
             <li><Link to="/carrinhos" className="hover:text-blue-200">Carrinhos</Link></li>
             <li><Link to="/estoque" className="hover:text-blue-200">Estoque Padrão</Link></li>
             <li><Link to="/login" className="hover:text-blue-200">Login</Link></li>
