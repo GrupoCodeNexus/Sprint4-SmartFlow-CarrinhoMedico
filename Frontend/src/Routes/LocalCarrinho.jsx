@@ -245,6 +245,13 @@ export default function StatusCarrinhos() {
                 <span className="font-semibold">Andar Vazio:</span> Sem carrinho cadastrado para este andar.
               </p>
             </div>
+            {/* Item da Legenda: Observação de mudança de status */}
+            <div className="flex items-center gap-3">
+              {/* <div className={`w-8 h-8 rounded-full ${coresPorEstadoClasses.vazio} shadow`}></div> */}
+              <p className="text-gray-700 text-sm">
+                <span className="font-semibold">Obs:</span> É possivel alterar os status dos carrinhos apenas clicando no seu icone
+              </p>
+            </div>
           </div>
         </div>
       </div>
