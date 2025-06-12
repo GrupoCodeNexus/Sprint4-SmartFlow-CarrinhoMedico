@@ -7,6 +7,7 @@ const CarrinhoPage = () => {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showEstoqueCarrinho, setShowEstoqueCarrinho] = useState(true);
 
   const fetchCarrinhos = async () => {
     setLoading(true);
@@ -63,13 +64,21 @@ const CarrinhoPage = () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Gerenciamento de Carrinhos de Emergência</h1>
+      <div className='flex gap-4 mb-6'>
+        <button
+          onClick={() => setShowForm(!showForm)}
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out cursor-pointer"
+        >
+          {showForm ? 'Esconder Formulário' : 'Adicionar Novo Carrinho'}
+        </button>
 
-      <button
-        onClick={() => setShowForm(!showForm)}
-        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-6"
-      >
-        {showForm ? 'Esconder Formulário' : 'Adicionar Novo Carrinho'}
-      </button>
+        <button
+          onClick={()=> setShowEstoqueCarrinho(!showEstoqueCarrinho)}
+          className=" bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out cursor-pointer"
+        >
+          {showEstoqueCarrinho ? 'Ocultar Estoque dos carrinho' : 'Mostrar Estoque dos carrinhos'}
+        </button>
+      </div>
 
       {showForm && <CarrinhoForm onCarrinhoCreated={handleCarrinhoCreated} />}
 
@@ -85,29 +94,37 @@ const CarrinhoPage = () => {
               <p className="text-gray-700 mb-4">
                 <strong className="font-semibold">Localização:</strong> {carrinho.localizacao}
               </p>
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Gavetas:</h4>
-              <div className="space-y-4">
-                {carrinho.gavetas && carrinho.gavetas.length > 0 ? (
-                  carrinho.gavetas.map((gaveta) => (
-                    <div key={gaveta.id} className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                      <h5 className="font-semibold text-blue-800 mb-2">{gaveta.nome}</h5>
-                      <ul className="list-disc list-inside text-gray-700">
-                        {gaveta.itens && gaveta.itens.length > 0 ? (
-                          gaveta.itens.map((item) => (
-                            <li key={item.id} className="mb-1">
-                              <span className="font-medium">{item.nome}</span> - Quantidade: <span className="text-blue-600">{item.quantidade}</span>
-                            </li>
-                          ))
-                        ) : (
-                          <li className="italic text-gray-500">Nenhum item nesta gaveta.</li>
-                        )}
-                      </ul>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-gray-500 italic">Nenhuma gaveta foi encontrada nesse carrinho.</p>
-                )}
-              </div>
+
+              {/* Renderizar carrinho apenas se estiver para mostrar  */}
+              
+              {showEstoqueCarrinho &&( 
+                <>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Gavetas:</h4>
+                  <div className="space-y-4">
+                    {carrinho.gavetas && carrinho.gavetas.length > 0 ? (
+                      carrinho.gavetas.map((gaveta) => (
+                        <div key={gaveta.id} className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                          <h5 className="font-semibold text-blue-800 mb-2">{gaveta.nome}</h5>
+                          <ul className="list-disc list-inside text-gray-700">
+                            {gaveta.itens && gaveta.itens.length > 0 ? (
+                              gaveta.itens.map((item) => (
+                                <li key={item.id} className="mb-1">
+                                  <span className="font-medium">{item.nome}</span> - Quantidade: <span className="text-blue-600">{item.quantidade}</span>
+                                </li>
+                              ))
+                            ) : (
+                              <li className="italic text-gray-500">Nenhum item nesta gaveta.</li>
+                            )}
+                          </ul>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-gray-500 italic">Nenhuma gaveta foi encontrada nesse carrinho.</p>
+                    )}
+                  </div>
+                </>
+              )}
+              
               <div className="mt-6 text-right">
                 <button
                   onClick={() => handleDeleteCarrinho(carrinho.id)}
