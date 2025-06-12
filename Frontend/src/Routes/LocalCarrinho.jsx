@@ -10,12 +10,11 @@ const coresPorEstadoClasses = {
 };
 
 // Ordem de prioridade para exibir o status de um andar com múltiplos carrinhos
-// (quanto menor o número, maior a prioridade)
 const statusPrioridade = {
-  aberto: 1, // Um carrinho aberto torna o andar "vermelho"
-  estoque: 2, // Se não há aberto, um com estoque incompleto torna "amarelo"
-  fechado: 3, // Se só há fechados, o andar é "verde"
-  vazio: 4, // Estado padrão se não houver carrinhos
+  aberto: 1,
+  estoque: 2,
+  fechado: 3,
+  vazio: 4,
 };
 
 // Função para extrair o número do andar de uma string de localização
@@ -25,11 +24,12 @@ function extrairNumeroAndar(localizacao) {
 }
 
 export default function StatusCarrinhos() {
-  // Estado para armazenar os carrinhos agrupados por andar.
-  // Cada posição do array principal (0-23) será um array de carrinhos para aquele andar.
   const [andaresComCarrinhos, setAndaresComCarrinhos] = useState(Array(24).fill([]));
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // Novo estado para controlar o índice do carrinho atualmente visível em cada andar
+  // Mapeia andarIndex para o índice do carrinho dentro do array daquele andar
+  const [currentCarrinhoIndexForAndar, setCurrentCarrinhoIndexForAndar] = useState({});
 
   async function fetchCarrinhos() {
     setLoading(true);
@@ -37,18 +37,26 @@ export default function StatusCarrinhos() {
     try {
       const response = await axios.get("http://localhost:3001/carrinhos");
 
-      // Inicializa um novo array de 24 posições, cada uma contendo um array vazio
       const tempAndares = Array(24).fill().map(() => []);
 
       response.data.forEach((carrinho) => {
         const andar = extrairNumeroAndar(carrinho.localizacao);
         if (andar >= 1 && andar <= 24) {
-          // Adiciona o carrinho ao array correspondente ao seu andar
           tempAndares[andar - 1].push(carrinho);
         }
       });
 
       setAndaresComCarrinhos(tempAndares);
+
+      // Inicializa os índices de rotação
+      const initialIndices = {};
+      tempAndares.forEach((carrinhosNoAndar, index) => {
+        if (carrinhosNoAndar.length > 1) {
+          initialIndices[index] = 0; // Começa exibindo o primeiro carrinho
+        }
+      });
+      setCurrentCarrinhoIndexForAndar(initialIndices);
+
     } catch (err) {
       console.error("Erro ao buscar carrinhos:", err);
       setError("Não foi possível carregar os carrinhos. Verifique a conexão com o servidor.");
@@ -61,16 +69,41 @@ export default function StatusCarrinhos() {
     fetchCarrinhos();
   }, []);
 
-  // Função para determinar o status predominante de um andar
+  // Efeito para gerenciar a rotação dos carrinhos
+  useEffect(() => {
+    const intervals = {};
+
+    andaresComCarrinhos.forEach((carrinhosNoAndar, andarIndex) => {
+      // Ativa a rotação apenas para andares com múltiplos carrinhos
+      if (carrinhosNoAndar.length > 1) {
+        intervals[andarIndex] = setInterval(() => {
+          setCurrentCarrinhoIndexForAndar(prev => {
+            const currentIdx = prev[andarIndex] || 0;
+            const nextIdx = (currentIdx + 1) % carrinhosNoAndar.length;
+            return {
+              ...prev,
+              [andarIndex]: nextIdx
+            };
+          });
+        }, 5000); // Rotação a cada 5 segundos
+      }
+    });
+
+    // Limpeza dos intervalos ao desmontar o componente ou quando os carrinhos mudam
+    return () => {
+      Object.values(intervals).forEach(clearInterval);
+    };
+  }, [andaresComCarrinhos]); // Depende de `andaresComCarrinhos` para reiniciar intervalos se os dados mudarem
+
   const getStatusDoAndar = (carrinhosNoAndar) => {
     if (!carrinhosNoAndar || carrinhosNoAndar.length === 0) {
       return "vazio";
     }
 
-    let statusPrioritario = "fechado"; // Assume 'fechado' como o melhor status inicial se houver carrinhos
+    let statusPrioritario = "fechado";
 
     carrinhosNoAndar.forEach(carrinho => {
-      const statusAtual = carrinho.status || "estoque"; // Default para 'estoque' se status não for definido
+      const statusAtual = carrinho.status || "estoque";
       if (statusPrioridade[statusAtual] < statusPrioridade[statusPrioritario]) {
         statusPrioritario = statusAtual;
       }
@@ -79,49 +112,29 @@ export default function StatusCarrinhos() {
     return statusPrioritario;
   };
 
-  // Função para obter o nome do carrinho para exibição no card
-  const getNomeCarrinhoDisplay = (carrinhosNoAndar) => {
-      if (!carrinhosNoAndar || carrinhosNoAndar.length === 0) {
-          return "(Vazio)";
-      }
-      // Se houver apenas um carrinho, exibe o nome dele
-      if (carrinhosNoAndar.length === 1) {
-          return carrinhosNoAndar[0].nome || '';
-      }
-      // Se houver múltiplos, exibe o nome do que tem o status de maior prioridade
-      // ou apenas "Múltiplos" ou "Vários Carrinhos"
-      let carrinhoPrioritario = carrinhosNoAndar[0];
-      carrinhosNoAndar.forEach(carrinho => {
-          const statusAtual = carrinho.status || "estoque";
-          const statusPrioritarioAtual = carrinhoPrioritario.status || "estoque";
-          if (statusPrioridade[statusAtual] < statusPrioridade[statusPrioritarioAtual]) {
-              carrinhoPrioritario = carrinho;
-          }
-      });
-      // Poderia ser mais complexo aqui, mas para simplicidade, pega o nome do prioritário
-      return carrinhoPrioritario.nome || 'Múltiplos';
-  };
-
-
-  // Ações de clique: O que acontece quando você clica em um andar?
-  // Se você clicar em um andar com múltiplos carrinhos, qual deles você quer alterar?
-  // A lógica atual vai tentar alterar o status do *primeiro* carrinho que encontrar nesse andar.
-  // Se quiser um comportamento mais complexo (ex: modal para escolher qual carrinho), seria necessário mais UI.
   const handleToggleStatus = async (andarIndex) => {
     const carrinhosNoAndar = andaresComCarrinhos[andarIndex];
 
     if (!carrinhosNoAndar || carrinhosNoAndar.length === 0) {
       console.warn(`Andar ${andarIndex + 1} está vazio. Não é possível alterar status.`);
-      return; // Não faz nada se o andar estiver vazio
+      return;
     }
 
-    // Para simplificar, vamos alterar o status do PRIMEIRO carrinho encontrado neste andar.
-    // Em um cenário real com múltiplos carrinhos, você pode querer um modal
-    // para o usuário escolher qual carrinho quer gerenciar.
-    const carrinhoParaAtualizar = carrinhosNoAndar[0];
+    // Se houver múltiplos carrinhos, a ação de clique precisa ser mais granular.
+    // Neste caso, vamos assumir que queremos alterar o status do carrinho atualmente visível.
+    // Se o andar tem apenas um carrinho, ele será o `currentCarrinhoIndex`.
+    const indexToUpdate = carrinhosNoAndar.length > 1
+        ? (currentCarrinhoIndexForAndar[andarIndex] || 0) // Usa o índice de rotação
+        : 0; // Se for um único carrinho, sempre o primeiro
+
+    const carrinhoParaAtualizar = carrinhosNoAndar[indexToUpdate];
+
+    if (!carrinhoParaAtualizar) {
+        console.warn(`Carrinho para atualizar não encontrado no andar ${andarIndex + 1} no índice ${indexToUpdate}.`);
+        return;
+    }
 
     let novoStatus;
-    // Lógica para alternar entre os estados: aberto -> fechado -> estoque -> aberto
     if (carrinhoParaAtualizar.status === "aberto") {
       novoStatus = "fechado";
     } else if (carrinhoParaAtualizar.status === "fechado") {
@@ -136,13 +149,12 @@ export default function StatusCarrinhos() {
         { status: novoStatus }
       );
 
-      // Atualiza o estado local para refletir a mudança
       setAndaresComCarrinhos(prevAndares => {
         const newAndares = [...prevAndares];
-        const updatedCarrinhosNoAndar = newAndares[andarIndex].map(c =>
+        // Encontra o carrinho atualizado e substitui-o
+        newAndares[andarIndex] = newAndares[andarIndex].map(c =>
           c.id === carrinhoParaAtualizar.id ? { ...c, status: novoStatus } : c
         );
-        newAndares[andarIndex] = updatedCarrinhosNoAndar;
         return newAndares;
       });
     } catch (err) {
@@ -164,20 +176,28 @@ export default function StatusCarrinhos() {
         {/* Coluna Principal - Grade de Carrinhos */}
         <div className="flex-grow">
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-8 xl:grid-cols-8 gap-4 justify-items-center">
-            {Array.from({ length: 24 }).map((_, index) => { // Mapeia para 24 andares
+            {Array.from({ length: 24 }).map((_, index) => {
               const andar = index + 1;
               const carrinhosNoAndar = andaresComCarrinhos[index];
-              const statusDoAndar = getStatusDoAndar(carrinhosNoAndar);
-              const bgColorClass = coresPorEstadoClasses[statusDoAndar] || "bg-gray-400"; // Fallback para cinza
-              const nomeCarrinhoDisplay = getNomeCarrinhoDisplay(carrinhosNoAndar);
 
+              // Determina qual carrinho exibir (para rotação) ou o único carrinho
+              const currentCarrinhoIndex = carrinhosNoAndar.length > 1
+                ? (currentCarrinhoIndexForAndar[index] || 0)
+                : 0; // Se 1 ou 0 carrinhos, sempre pega o primeiro (ou índice 0)
+
+              const carrinhoParaExibir = carrinhosNoAndar[currentCarrinhoIndex];
+
+              const statusParaExibir = carrinhoParaExibir?.status || "vazio"; // Usa o status do carrinho específico
+              const bgColorClass = coresPorEstadoClasses[statusParaExibir] || "bg-gray-400";
+
+              const nomeCarrinhoDisplay = carrinhoParaExibir?.nome || "(Vazio)";
 
               return (
                 <div
-                  key={andar} // Usamos o número do andar como key
+                  key={andar}
                   className={`
                     carrinho-item
-                    relative w-28 h-28 sm:w-28 sm:h-28 lg:w-32 lg:h-32 // Tamanho fixo e responsivo
+                    relative w-28 h-28 sm:w-28 sm:h-28 // Tamanho fixo e responsivo
                     rounded-xl shadow-md flex flex-col items-center justify-end p-1
                     text-white font-bold text-center text-xs leading-tight
                     cursor-pointer transition-colors duration-300 ease-in-out
@@ -186,7 +206,7 @@ export default function StatusCarrinhos() {
                   `}
                   style={{
                     backgroundImage:
-                      "url('https://cdn-icons-png.flaticon.com/512/263/263142.png')", // Ícone do carrinho
+                      "url('https://cdn-icons-png.flaticon.com/512/263/263142.png')",
                   }}
                   onClick={() => handleToggleStatus(index)}
                 >
