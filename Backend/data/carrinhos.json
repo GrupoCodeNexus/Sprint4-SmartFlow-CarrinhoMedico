@@ -1,1 +1,1554 @@
-[]
+[
+  {
+    "id": "CAR-1749607310386",
+    "nome": "Carrinho",
+    "localizacao": "15° Andar",
+    "status": "fechado",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749694901135",
+    "nome": "Carrinho de Suprimentos da UTI",
+    "localizacao": "14° andar",
+    "status": "aberto",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749697532386",
+    "nome": "Carrinho setor erfermagem",
+    "localizacao": "10° andar",
+    "status": "fechado",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749700824773",
+    "nome": "Carrinho de Suprimentos UTI 2",
+    "localizacao": "14° andar ao lado direito do elevador",
+    "status": "estoque",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749701510294",
+    "nome": "Suprimentos para farmácia",
+    "localizacao": "1° andar ao lado da escada rolante",
+    "status": "fechado",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749701896696",
+    "nome": "Carrinho Pronto Socorro",
+    "localizacao": "6° andar ao lado do quarto 0602",
+    "status": "estoque",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749702076098",
+    "nome": "Centro Cirúrgico ",
+    "localizacao": "18° andar",
+    "status": "fechado",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  },
+  {
+    "id": "CAR-1749702188564",
+    "nome": "Unidade ambulatorial",
+    "localizacao": "4° andar ao lado da recepção 2",
+    "status": "aberto",
+    "gavetas": [
+      {
+        "nome": "Gaveta de Medicamentos de Emergência",
+        "itens": [
+          {
+            "nome": "Adrenalina (1mg/mL)",
+            "quantidade": 7
+          },
+          {
+            "nome": "Atropina (0.25mg/mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Amiodarona (150mg/3mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Diazepam (10mg)",
+            "quantidade": 4
+          },
+          {
+            "nome": "Glicose 50% (50mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Lidocaína 2% (Frasco)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Morfina (10mg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fentanil (50mcg/mL)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Naloxona (0.4mg/mL)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Via Aérea e Ventilação",
+        "itens": [
+          {
+            "nome": "Máscara O2 (Adulto)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Máscara O2 (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Cânula de Guedel (Tamanhos 1-5)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Ambu (Adulto)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Ambu (Pediátrico)",
+            "quantidade": 1
+          },
+          {
+            "nome": "Laringoscópio (Cabos e Lâminas)",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Acesso Venoso e Fluidos",
+        "itens": [
+          {
+            "nome": "Cateter IV (Calibres diversos)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Scalp (Calibres diversos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Equipo Macrogotas",
+            "quantidade": 3
+          },
+          {
+            "nome": "Equipo Microgotas",
+            "quantidade": 2
+          },
+          {
+            "nome": "Soro Fisiológico 0.9% (500mL)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Soro Glicosado 5% (500mL)",
+            "quantidade": 3
+          },
+          {
+            "nome": "Torniquete",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Curativos e Pequenos Procedimentos",
+        "itens": [
+          {
+            "nome": "Luva Estéril (Par)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Luva de Procedimento (Par)",
+            "quantidade": 20
+          },
+          {
+            "nome": "Gaze Estéril (Pct c/ 10)",
+            "quantidade": 15
+          },
+          {
+            "nome": "Atadura de Crepe (Diversos tamanhos)",
+            "quantidade": 5
+          },
+          {
+            "nome": "Esparadrapo (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Micropore (Rolo)",
+            "quantidade": 2
+          },
+          {
+            "nome": "Clorexidina Alcoólica 0.5%",
+            "quantidade": 1
+          },
+          {
+            "nome": "Seringa (3mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Seringa (5mL)",
+            "quantidade": 10
+          },
+          {
+            "nome": "Agulha (Calibres diversos)",
+            "quantidade": 20
+          }
+        ]
+      },
+      {
+        "nome": "Gaveta de Diagnóstico e Miscelânea",
+        "itens": [
+          {
+            "nome": "Estetoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Esfigmomanômetro",
+            "quantidade": 1
+          },
+          {
+            "nome": "Termômetro Digital",
+            "quantidade": 2
+          },
+          {
+            "nome": "Oftalmoscópio/Otoscópio",
+            "quantidade": 1
+          },
+          {
+            "nome": "Lanterna Clínica",
+            "quantidade": 2
+          },
+          {
+            "nome": "Fita Métrica",
+            "quantidade": 1
+          },
+          {
+            "nome": "Algodão Hidrófilo (Pct)",
+            "quantidade": 5
+          }
+        ]
+      }
+    ],
+    "acessos": []
+  }
+]

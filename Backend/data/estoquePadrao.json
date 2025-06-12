@@ -1,44 +1,188 @@
 {
   "gavetas": [
     {
-      "id": 1,
-      "nome": "Gaveta 1 (Medicamentos)",
+      "nome": "Gaveta de Medicamentos de Emergência",
       "itens": [
-        { "id": "MED001", "nome": "Dipirona 500mg", "quantidade": 50 },
-        { "id": "MED002", "nome": "Paracetamol 750mg", "quantidade": 40 },
-        { "id": "MED003", "nome": "Amoxicilina 500mg", "quantidade": 30 }
+        {
+          "nome": "Adrenalina (1mg/mL)",
+          "quantidade": 7
+        },
+        {
+          "nome": "Atropina (0.25mg/mL)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Amiodarona (150mg/3mL)",
+          "quantidade": 3
+        },
+        {
+          "nome": "Diazepam (10mg)",
+          "quantidade": 4
+        },
+        {
+          "nome": "Glicose 50% (50mL)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Lidocaína 2% (Frasco)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Morfina (10mg/mL)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Fentanil (50mcg/mL)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Naloxona (0.4mg/mL)",
+          "quantidade": 1
+        }
       ]
     },
     {
-      "id": 2,
-      "nome": "Gaveta 2 (Insumos Médicos)",
+      "nome": "Gaveta de Via Aérea e Ventilação",
       "itens": [
-        { "id": "INS001", "nome": "Luvas Descartáveis (Caixa)", "quantidade": 10 },
-        { "id": "INS002", "nome": "Máscaras Cirúrgicas (Caixa)", "quantidade": 15 }
+        {
+          "nome": "Máscara O2 (Adulto)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Máscara O2 (Pediátrico)",
+          "quantidade": 1
+        },
+        {
+          "nome": "Cânula de Guedel (Tamanhos 1-5)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Tubo Endotraqueal (Diversos tamanhos)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Ambu (Adulto)",
+          "quantidade": 1
+        },
+        {
+          "nome": "Ambu (Pediátrico)",
+          "quantidade": 1
+        },
+        {
+          "nome": "Laringoscópio (Cabos e Lâminas)",
+          "quantidade": 1
+        }
       ]
     },
     {
-      "id": 3,
-      "nome": "Gaveta 3 (Insumos Médicos)",
+      "nome": "Gaveta de Acesso Venoso e Fluidos",
       "itens": [
-        { "id": "INS003", "nome": "Seringas 5ml (Caixa)", "quantidade": 20 },
-        { "id": "INS004", "nome": "Agulhas 25x7 (Caixa)", "quantidade": 20 }
+        {
+          "nome": "Cateter IV (Calibres diversos)",
+          "quantidade": 10
+        },
+        {
+          "nome": "Scalp (Calibres diversos)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Equipo Macrogotas",
+          "quantidade": 3
+        },
+        {
+          "nome": "Equipo Microgotas",
+          "quantidade": 2
+        },
+        {
+          "nome": "Soro Fisiológico 0.9% (500mL)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Soro Glicosado 5% (500mL)",
+          "quantidade": 3
+        },
+        {
+          "nome": "Torniquete",
+          "quantidade": 2
+        }
       ]
     },
     {
-      "id": 4,
-      "nome": "Gaveta 4 (Insumos Médicos)",
+      "nome": "Gaveta de Curativos e Pequenos Procedimentos",
       "itens": [
-        { "id": "INS005", "nome": "Algodão Hidrófilo (Rolo)", "quantidade": 5 },
-        { "id": "INS006", "nome": "Gaze Estéril 10x10cm (Pacote)", "quantidade": 25 }
+        {
+          "nome": "Luva Estéril (Par)",
+          "quantidade": 10
+        },
+        {
+          "nome": "Luva de Procedimento (Par)",
+          "quantidade": 20
+        },
+        {
+          "nome": "Gaze Estéril (Pct c/ 10)",
+          "quantidade": 15
+        },
+        {
+          "nome": "Atadura de Crepe (Diversos tamanhos)",
+          "quantidade": 5
+        },
+        {
+          "nome": "Esparadrapo (Rolo)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Micropore (Rolo)",
+          "quantidade": 2
+        },
+        {
+          "nome": "Clorexidina Alcoólica 0.5%",
+          "quantidade": 1
+        },
+        {
+          "nome": "Seringa (3mL)",
+          "quantidade": 10
+        },
+        {
+          "nome": "Seringa (5mL)",
+          "quantidade": 10
+        },
+        {
+          "nome": "Agulha (Calibres diversos)",
+          "quantidade": 20
+        }
       ]
     },
     {
-      "id": 5,
-      "nome": "Gaveta 5 (Insumos Médicos)",
+      "nome": "Gaveta de Diagnóstico e Miscelânea",
       "itens": [
-        { "id": "INS007", "nome": "Álcool 70% (Frasco 1L)", "quantidade": 3 },
-        { "id": "INS008", "nome": "Esparadrapo (Rolo)", "quantidade": 8 }
+        {
+          "nome": "Estetoscópio",
+          "quantidade": 1
+        },
+        {
+          "nome": "Esfigmomanômetro",
+          "quantidade": 1
+        },
+        {
+          "nome": "Termômetro Digital",
+          "quantidade": 2
+        },
+        {
+          "nome": "Oftalmoscópio/Otoscópio",
+          "quantidade": 1
+        },
+        {
+          "nome": "Lanterna Clínica",
+          "quantidade": 2
+        },
+        {
+          "nome": "Fita Métrica",
+          "quantidade": 1
+        },
+        {
+          "nome": "Algodão Hidrófilo (Pct)",
+          "quantidade": 5
+        }
       ]
     }
   ]
