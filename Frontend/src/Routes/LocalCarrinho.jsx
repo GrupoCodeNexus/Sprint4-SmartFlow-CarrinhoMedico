@@ -27,8 +27,6 @@ export default function StatusCarrinhos() {
   const [andaresComCarrinhos, setAndaresComCarrinhos] = useState(Array(24).fill([]));
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // Novo estado para controlar o índice do carrinho atualmente visível em cada andar
-  // Mapeia andarIndex para o índice do carrinho dentro do array daquele andar
   const [currentCarrinhoIndexForAndar, setCurrentCarrinhoIndexForAndar] = useState({});
 
   async function fetchCarrinhos() {
@@ -48,11 +46,10 @@ export default function StatusCarrinhos() {
 
       setAndaresComCarrinhos(tempAndares);
 
-      // Inicializa os índices de rotação
       const initialIndices = {};
       tempAndares.forEach((carrinhosNoAndar, index) => {
         if (carrinhosNoAndar.length > 1) {
-          initialIndices[index] = 0; // Começa exibindo o primeiro carrinho
+          initialIndices[index] = 0;
         }
       });
       setCurrentCarrinhoIndexForAndar(initialIndices);
@@ -69,12 +66,10 @@ export default function StatusCarrinhos() {
     fetchCarrinhos();
   }, []);
 
-  // Efeito para gerenciar a rotação dos carrinhos
   useEffect(() => {
     const intervals = {};
 
     andaresComCarrinhos.forEach((carrinhosNoAndar, andarIndex) => {
-      // Ativa a rotação apenas para andares com múltiplos carrinhos
       if (carrinhosNoAndar.length > 1) {
         intervals[andarIndex] = setInterval(() => {
           setCurrentCarrinhoIndexForAndar(prev => {
@@ -85,15 +80,14 @@ export default function StatusCarrinhos() {
               [andarIndex]: nextIdx
             };
           });
-        }, 5000); // Rotação a cada 5 segundos
+        }, 5000);
       }
     });
 
-    // Limpeza dos intervalos ao desmontar o componente ou quando os carrinhos mudam
     return () => {
       Object.values(intervals).forEach(clearInterval);
     };
-  }, [andaresComCarrinhos]); // Depende de `andaresComCarrinhos` para reiniciar intervalos se os dados mudarem
+  }, [andaresComCarrinhos]);
 
   const getStatusDoAndar = (carrinhosNoAndar) => {
     if (!carrinhosNoAndar || carrinhosNoAndar.length === 0) {
@@ -120,12 +114,9 @@ export default function StatusCarrinhos() {
       return;
     }
 
-    // Se houver múltiplos carrinhos, a ação de clique precisa ser mais granular.
-    // Neste caso, vamos assumir que queremos alterar o status do carrinho atualmente visível.
-    // Se o andar tem apenas um carrinho, ele será o `currentCarrinhoIndex`.
     const indexToUpdate = carrinhosNoAndar.length > 1
-        ? (currentCarrinhoIndexForAndar[andarIndex] || 0) // Usa o índice de rotação
-        : 0; // Se for um único carrinho, sempre o primeiro
+        ? (currentCarrinhoIndexForAndar[andarIndex] || 0)
+        : 0;
 
     const carrinhoParaAtualizar = carrinhosNoAndar[indexToUpdate];
 
@@ -151,7 +142,6 @@ export default function StatusCarrinhos() {
 
       setAndaresComCarrinhos(prevAndares => {
         const newAndares = [...prevAndares];
-        // Encontra o carrinho atualizado e substitui-o
         newAndares[andarIndex] = newAndares[andarIndex].map(c =>
           c.id === carrinhoParaAtualizar.id ? { ...c, status: novoStatus } : c
         );
@@ -180,14 +170,13 @@ export default function StatusCarrinhos() {
               const andar = index + 1;
               const carrinhosNoAndar = andaresComCarrinhos[index];
 
-              // Determina qual carrinho exibir (para rotação) ou o único carrinho
               const currentCarrinhoIndex = carrinhosNoAndar.length > 1
                 ? (currentCarrinhoIndexForAndar[index] || 0)
-                : 0; // Se 1 ou 0 carrinhos, sempre pega o primeiro (ou índice 0)
+                : 0;
 
               const carrinhoParaExibir = carrinhosNoAndar[currentCarrinhoIndex];
 
-              const statusParaExibir = carrinhoParaExibir?.status || "vazio"; // Usa o status do carrinho específico
+              const statusParaExibir = carrinhoParaExibir?.status || "vazio";
               const bgColorClass = coresPorEstadoClasses[statusParaExibir] || "bg-gray-400";
 
               const nomeCarrinhoDisplay = carrinhoParaExibir?.nome || "(Vazio)";
@@ -197,24 +186,27 @@ export default function StatusCarrinhos() {
                   key={andar}
                   className={`
                     carrinho-item
-                    relative w-28 h-28 sm:w-28 sm:h-28 // Tamanho fixo e responsivo
-                    rounded-xl shadow-md flex flex-col items-center justify-end p-1
+                    relative w-28 h-28 sm:w-28 sm:h-28 // Tamanho responsivo dos cards
+                    rounded-xl shadow-md
+                    flex flex-col items-center justify-center // Centraliza conteúdo (ícone e texto)
                     text-white font-bold text-center text-xs leading-tight
                     cursor-pointer transition-colors duration-300 ease-in-out
-                    bg-contain bg-no-repeat bg-center
                     ${bgColorClass}
                   `}
-                  style={{
-                    backgroundImage:
-                      "url('https://cdn-icons-png.flaticon.com/512/263/263142.png')",
-                  }}
                   onClick={() => handleToggleStatus(index)}
                 >
-                  <div className="absolute inset-0 flex flex-col justify-end items-center p-1">
-                    <div className="bg-black bg-opacity-40 rounded px-1 py-0.5 whitespace-pre-line">
-                      {`${andar}º Andar\n${nomeCarrinhoDisplay}`}
+                    {/* Ícone do carrinho como elemento de imagem para melhor controle de sobreposição */}
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
+                        alt="Ícone de Carrinho"
+                        className="absolute inset-0 w-full h-full object-contain p-4" // Ajusta padding da imagem
+                    />
+                    {/* Texto com fundo semi-transparente, posicionado na parte inferior */}
+                    <div className="absolute bottom-1 w-full flex justify-center px-1">
+                        <div className="bg-black bg-opacity-40 rounded px-1 py-0.5 whitespace-pre-line z-10"> {/* Z-index para garantir que fique por cima */}
+                            {`${andar}º Andar\n${nomeCarrinhoDisplay}`}
+                        </div>
                     </div>
-                  </div>
                 </div>
               );
             })}
