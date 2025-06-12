@@ -205,7 +205,7 @@ const EstoquePage = () => {
 
       <button
         onClick={handleAddGaveta}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-6"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mb-6 cursor-pointer"
       >
         Adicionar Nova Gaveta
       </button>
@@ -228,13 +228,13 @@ const EstoquePage = () => {
                 <div className="flex space-x-2">
                     <button
                         onClick={() => toggleGavetaVisibility(gavetaKey)}
-                        className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-1 px-3 rounded-md transition duration-200"
+                        className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-1 px-3 rounded-md transition duration-200 cursor-pointer"
                     >
                         {isExpanded ? 'Ocultar' : 'Mostrar'}
                     </button>
                     <button
                         onClick={() => handleRemoveGaveta(gavetaKey)}
-                        className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md transition duration-200"
+                        className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md transition duration-200 cursor-pointer"
                     >
                         Remover Gaveta
                     </button>
@@ -271,7 +271,7 @@ const EstoquePage = () => {
                             />
                             <button
                               onClick={() => handleRemoveItem(gavetaKey, itemKey)}
-                              className="ml-4 bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-2 rounded-md transition duration-200 text-sm"
+                              className="ml-4 bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-2 rounded-md transition duration-200 text-sm cursor-pointer"
                             >
                               Remover
                             </button>
@@ -284,7 +284,7 @@ const EstoquePage = () => {
                   )}
                   <button
                     onClick={() => handleAddItem(gavetaKey)}
-                    className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md transition duration-200"
+                    className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md transition duration-200 cursor-pointer"
                   >
                     Adicionar Novo Item
                   </button>
@@ -297,10 +297,15 @@ const EstoquePage = () => {
 
       <button
         onClick={handleUpdateEstoque}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mt-6"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out mt-6 cursor-pointer"
       >
         Salvar Alterações no Estoque Padrão
       </button>
+      {message && (
+        <div className={`p-3 mb-4 mt-3 rounded-md ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+          {message}
+        </div>
+      )}
     </div>
   );
 };

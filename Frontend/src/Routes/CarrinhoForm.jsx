@@ -71,7 +71,7 @@ const CarrinhoForm = ({ onCarrinhoCreated }) => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200 cursor-pointer"
         >
           Criar Carrinho
         </button>
