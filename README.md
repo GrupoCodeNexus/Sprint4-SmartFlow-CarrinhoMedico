@@ -86,7 +86,7 @@ Para a instalação e execução deste projeto, siga os passos abaixo:
 
 ## Links Úteis 🔗
 
-* **Repositório do Projeto:** Clique aqui
+* **Repositório do Projeto:** <a href="https://github.com/GrupoCodeNexus/Sprint4-SmartFlow-CarrinhoMedico">Clique aqui</a>
 * **Documentação React:** [https://react.dev/](https://react.dev/)
 * **Documentação Tailwind CSS:** [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
 
