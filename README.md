@@ -55,8 +55,8 @@ Para a instalação e execução deste projeto, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_desse_REPOSITORIO>
-    cd <NOME_DA_PASTA_DO_desse_REPOSITORIO>
+    git clone https://github.com/GrupoCodeNexus/Sprint4-SmartFlow-CarrinhoMedico
+    cd Sprint4-SmartFlow-CarrinhoMedico
     ```
 
 2. **Instale as dependência do backend:**
